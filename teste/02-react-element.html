@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- AGORA COMO SERIA COM OS ELEMENTOS DO REACT -->
+
+    <script type="text/javascript">
+        const rootElement = document.getElementById("root");
+
+        const element = React.createElement("h1", {
+            children: "Guia completo - ReactJs"
+        })
+
+        ReactDOM.render(element, rootElement)
+    </script>
+</body>
+
+</html>

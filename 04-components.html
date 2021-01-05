@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // CONCEITO DE COMPONENTIZAÇÃO DO REACT
+
+        const rootElement = document.getElementById('root');
+        function Component1(props) {
+            return <h1>REACT.JS - GUIA PARA INCIANTES</h1>
+        }
+
+        function Component2(props) {
+            return <h1>Renato Rodrigues</h1>
+        }
+
+        const element = (
+            <React.Fragment>
+                <Component1 />
+                <Component2 />
+            </React.Fragment>
+
+        );
+
+        ReactDOM.render(element, rootElement);
+    </script>
+</body>
+
+</html>

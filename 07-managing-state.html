@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // MUDANDO O ESTADO DE UM ELEMENTO COM REACT
+
+        const rootElement = document.getElementById('root');
+
+        const state = { channelName: '' }
+
+
+
+        function App(props) {
+
+            function handleClick() {
+                setState({ channelName: 'Renato Rodrigues' })
+            }
+
+            return (
+                <div>
+                    <h1>REACT.JS - GUIA PARA INICIANTES</h1>
+                    <button onClick={handleClick}>Exibir nome do canal </button>
+                    <h3>{state.channelName}</h3>
+                </div>
+            )
+        }
+
+        function setState(newState) {
+            Object.assign(state, newState)
+            renderApp();
+        }
+
+        function renderApp() {
+            ReactDOM.render(<App />, rootElement)
+        }
+
+        renderApp()
+    </script>
+</body>
+
+</html>

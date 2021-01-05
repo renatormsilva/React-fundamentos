@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // MUDANDO O ESTADO DE UM ELEMENTO, AGORA COM HOOKS
+
+        const rootElement = document.getElementById('root');
+
+
+        function App(props) {
+
+            const [channelName, setChannelName] = React.useState('default');
+
+            function handleClick() {
+                setChannelName('Renato Rodrigues')
+            }
+
+            return (
+                <div>
+                    <h1>REACT.JS - GUIA PARA INICIANTES</h1>
+                    <button onClick={handleClick}>Exibir nome do canal </button>
+                    <h3>{channelName}</h3>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, rootElement)
+
+
+    </script>
+</body>
+
+</html>
